@@ -1,0 +1,52 @@
+/*
+* @title: Main CSS
+* @author: Paul Opitz
+* @date: 2023
+* 
+*/
+
+/******************************* RESET ********************************/
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+main {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+img {
+    display: block;
+}
+
+/******************************* VARIABLES ******************************/
+
+:root {
+    /** Colors **/
+    --clr-1: #AB936D;
+    --clr-2: #f5f5f5;
+
+}
+
+/******************************* UTILITY ********************************/
+
+
+
+/******************************* LAYOUT ******************************/
