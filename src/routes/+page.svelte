@@ -1,5 +1,7 @@
 <script>
-	import Scatterplot from '$lib/components/Scatterplot.svelte';
+	import Scatterplot from '$lib/components/examples/scatterplot/Scatterplot.svelte';
+	import Beeswarmplot from '$lib/components/examples/beeswarmplot/Beeswarmplot.svelte';
+	import Globe from '$lib/components/examples/globe/Globe.svelte';
 </script>
 
 <main>
@@ -8,7 +10,18 @@
 </main>
 
 <section>
+	<h2>Scatterplot</h2>
 	<Scatterplot />
+</section>
+
+<section>
+	<h2>Beeswarm</h2>
+	<Beeswarmplot />
+</section>
+
+<section>
+	<h2>Globe</h2>
+	<Globe />
 </section>
 
 <style>
@@ -17,13 +30,18 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 100px;
+		padding: 60px;
 	}
 	section {
+		margin: 15px;
 	}
 	h1 {
 		font-size: 3rem;
 		margin-bottom: 0;
+	}
+	h2 {
+		text-align: center;
+		margin-top: 60px;
 	}
 	p {
 		font-size: 1.5rem;

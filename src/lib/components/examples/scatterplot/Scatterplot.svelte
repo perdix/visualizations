@@ -1,12 +1,15 @@
 <script>
-	import data from '$lib/data/data.js';
+	import data from './data.js';
 	import { scaleLinear } from 'd3-scale';
 	import AxisX from './AxisX.svelte';
 	import AxisY from './AxisY.svelte';
 	import { fly } from 'svelte/transition';
 
-	let width;
+	let width = 0;
 	let height = 600;
+
+	let tooltipWidth = 0;
+	let tooltipHeight = 0;
 
 	let margin = {
 		top: 30,
@@ -21,16 +24,14 @@
 	$: xScale = scaleLinear().domain([0, 100]).range([0, innerWidth]);
 	let yScale = scaleLinear().domain([0, 60]).range([innerHeight, 0]);
 
+	/** @type { { name: string, grade: number, hours: number } | null } */
 	let hoveredData;
 	$: x = xScale(hoveredData?.grade) + margin.left;
 	$: xPos = tooltipWidth + x > width ? x - tooltipWidth : x;
 
 	$: y = yScale(hoveredData?.hours) + margin.top;
-	let tooltipWidth;
-	let tooltipHeight;
 </script>
 
-<h1>Scatterplot</h1>
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	class="container"
@@ -40,6 +41,7 @@
 	}}
 >
 	{#if width}
+		<h1>Students and Grades</h1>
 		<svg {width} {height}>
 			<g transform="translate({margin.left} {margin.top})">
 				<AxisX {xScale} height={innerHeight} width={innerWidth} />
@@ -114,9 +116,8 @@
 		cursor: pointer;
 	}
 	h1 {
-		font-size: 1.3rem;
-		margin-bottom: 0;
-		font-weight: 100;
 		text-align: center;
+		font-weight: 100;
+		font-size: 30px;
 	}
 </style>

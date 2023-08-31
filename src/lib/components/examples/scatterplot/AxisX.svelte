@@ -16,3 +16,11 @@
 		>Final Grade
 	</text>
 </g>
+
+<style>
+	.tick text {
+		color: black;
+		fill: grey;
+		font-size: 12px;
+	}
+</style>
