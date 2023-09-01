@@ -1,0 +1,22 @@
+[
+    {
+        "fruit": "Apples",
+        "quantity": 30
+    },
+    {
+        "fruit": "Bananas",
+        "quantity": 45
+    },
+    {
+        "fruit": "Oranges",
+        "quantity": 20
+    },
+    {
+        "fruit": "Grapes",
+        "quantity": 15
+    },
+    {
+        "fruit": "Pears",
+        "quantity": 25
+    }
+]
