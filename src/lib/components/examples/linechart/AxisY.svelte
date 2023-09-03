@@ -2,8 +2,6 @@
 	export let yScale;
 	export let width;
 	let yTicks = yScale.ticks(10);
-
-	console.log(yTicks);
 </script>
 
 {#each yTicks as tick, i}
