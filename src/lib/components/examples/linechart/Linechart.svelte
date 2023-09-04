@@ -46,9 +46,9 @@
 	let sortedTempData = [...tempData].sort((a, b) => a.timestamp - b.timestamp);
 
 	const setMousePos = (e) => {
-		if (e.clientX < margin.left || e.clientX > width - margin.right) return;
+		if (e.offsetX < margin.left || e.offsetX > width - margin.right) return;
 		// Get the x value of the mouse position
-		circleX = e.clientX - margin.left;
+		circleX = e.offsetX - margin.left;
 		// Get the original x value of the dataset
 		const originalX = xScale.invert(circleX);
 		// Calculate the original y value of the dataset
